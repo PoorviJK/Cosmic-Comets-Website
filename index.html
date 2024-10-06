@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Comets</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Stylish header */
+        header {
+            background: linear-gradient(45deg, #c58906, #fead76);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center; /* Center the header content */
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Navigation Styles */
+        nav {
+            margin-top: 10px;
+        }
+
+        .hamburger {
+            display: none; /* Hidden by default */
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            display: flex; /* Horizontal layout */
+            flex-direction: row;
+            justify-content: center; /* Center navigation links */
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 500;
+            padding: 5px;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* Show hamburger on small screens */
+            }
+            .nav-links {
+                display: none; /* Hide links by default */
+                flex-direction: column; /* Stack vertically */
+                position: absolute;
+                background-color: #2c3e50; /* Background for dropdown */
+                top: 60px; /* Position below header */
+                left: 0;
+                right: 0;
+                z-index: 1;
+                padding: 10px 0; /* Add padding to dropdown */
+            }
+            .nav-links.active {
+                display: flex; /* Show links when active */
+            }
+            .nav-links a {
+                margin: 10px 0; /* Vertical margin */
+                text-align: center; /* Center align text */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Stylish Header Section -->
+    <header>
+        <h1>Solar Storm Awareness</h1>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About Solar Storms</a>
+                <a href="#signup">Sign Up for Alerts</a>
+                <a href="#forecast">Solar Storm Forecast</a>
+                <a href="#game">Game</a>
+                <a href="#video">Animated Video</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        // Hamburger menu functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h2>Stay Informed About Solar Storms</h2>
+    <p>Solar storms can significantly impact our planet and technology. Understanding these phenomena is crucial for safety and preparedness.</p>
+    <p>In May 2024, a series of intense solar storms affected communication systems, power grids, and even led to beautiful auroras visible in unusual locations!</p>
+    <a href="#signup" class="btn-signup">Sign Up for Alerts</a>
+</div>
+
+<style>
+    /* Hero Section Styles */
+    .hero {
+        background-image: url('Hero_bg.jpg'); /* Add a hero image */
+        height: 400px; /* Height for hero section */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px; /* Padding for better text spacing */
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+        margin: 0;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin: 5px 0; /* Small margin for paragraphs */
+    }
+
+    .btn-signup {
+        background-color: #70d2ff;
+        color: #2c3e50;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+</style>
+
+<!-- Content Section -->
+<div class="content" id="about">
+    <h2>About Solar Storms</h2>
+    <p>Solar storms, also known as geomagnetic storms, are disturbances in the Earth's magnetosphere caused by solar wind and solar flares from the Sun. These storms can affect various systems on Earth, including:</p>
+
+    <h3>What Causes Solar Storms?</h3>
+    <img src="S3.jpg" alt="Causes of Solar Storms" class="content-img">
+    <p>Solar storms originate from the Sun's surface, where explosive events release energy and charged particles into space. The main contributors to solar storms include:</p>
+    <ul>
+        <li><strong>Solar Flares:</strong> Sudden bursts of radiation from the Sun's surface.</li>
+        <li><strong>Coronal Mass Ejections (CMEs):</strong> Large expulsions of plasma and magnetic field from the Sun’s corona.</li>
+        <li><strong>High-Speed Solar Wind Streams:</strong> Streams of charged particles that can interact with Earth’s magnetic field.</li>
+    </ul>
+
+    <h3>Effects of Solar Storms</h3>
+    <img src="S2.jpg" alt="Effects of Solar Storms" class="content-img">
+    <p>Solar storms can have various impacts, including:</p>
+    <ul>
+        <li><strong>Communication Disruptions:</strong> Solar storms can interfere with radio signals and GPS navigation, leading to communication failures.</li>
+        <li><strong>Power Grid Failures:</strong> Intense solar activity can induce currents in power lines, potentially damaging transformers and causing blackouts.</li>
+        <li><strong>Auroras:</strong> Solar storms can lead to stunning auroras visible at lower latitudes than usual.</li>
+        <li><strong>Satellite Damage:</strong> Increased radiation can harm satellites in orbit, affecting their operation and lifespan.</li>
+    </ul>
+
+    <h3>How to Stay Prepared</h3>
+    <img src="S1.jpg" alt="Stay Prepared" class="content-img">
+    <p>Staying informed about solar storms is essential. By signing up for alerts, you can receive notifications about upcoming solar activity and take necessary precautions. Here are some tips to stay prepared:</p>
+    <ul>
+        <li>Keep a battery-powered radio and extra batteries in case of power outages.</li>
+        <li>Prepare an emergency kit with essential supplies like food, water, and first aid items.</li>
+        <li>Stay informed through reliable sources about solar storm predictions.</li>
+        <li>Limit electronic device use during severe solar storms to protect sensitive equipment.</li>
+    </ul>
+
+    <h3>Learn More</h3>
+    <p>For more detailed information on solar storms and their impacts, explore and check out the latest research from NASA.</p>
+</div>
+
+<style>
+    /* Content Section Styles */
+    .content {
+        padding: 40px;
+        background-color: #e3f2fd; /* Light blue background for vibrancy */
+        color: #333;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #1e88e5; /* Dark blue color for the heading */
+    }
+
+    .content p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .content h3 {
+        font-size: 2em;
+        margin-top: 20px;
+        color: #ff5722; /* Orange color for subsection headings */
+    }
+
+    .content ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+    }
+
+    .content li {
+        font-size: 1.1em;
+        margin: 10px 0; /* Spacing between list items */
+        text-align: left; /* Align text to left for better readability */
+    }
+
+    .content-img {
+        width: 80%; /* Responsive image width */
+        max-width: 600px; /* Maximum width for larger screens */
+        margin: 20px 0; /* Margin around images */
+        border-radius: 10px; /* Rounded corners for images */
+    }
+</style>
+
+
+<!-- Registration Form Section -->
+<div class="registration" id="signup">
+    <h2>Sign Up for Solar Storm Alerts</h2>
+    <p>Stay informed about solar storms and their potential impacts on Earth. Register now to receive timely alerts and updates directly to your phone!</p>
+    <form id="registration-form">
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email address" required>
+        <select id="alert-frequency" required>
+            <option value="" disabled selected>Select Alert Frequency</option>
+            <option value="immediate">Immediate Alerts</option>
+            <option value="daily">Daily Summary</option>
+            <option value="weekly">Weekly Summary</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+    <p id="confirmation-message" style="display:none;">Thank you for registering! You will receive alerts about solar storms.</p>
+</div>
+
+<style>
+    /* Registration Form Styles */
+    .registration {
+        padding: 40px;
+        background-color: #e1f5fe; /* Light blue background for the registration section */
+        text-align: center; /* Center align text */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        margin: 40px auto; /* Center the section */
+        max-width: 600px; /* Maximum width */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .registration:hover {
+        transform: scale(1.02); /* Slight scale on hover */
+    }
+
+    .registration h2 {
+        font-size: 2.5em; /* Heading size */
+        color: #1e88e5; /* Heading color */
+        margin-bottom: 10px; /* Spacing below heading */
+    }
+
+    .registration p {
+        font-size: 1.1em; /* Font size for description */
+        color: #555; /* Dark gray text color */
+        margin-bottom: 20px; /* Spacing below description */
+    }
+
+    .registration input,
+    .registration select {
+        padding: 10px;
+        margin: 10px 0; /* Spacing between input fields */
+        width: 80%; /* Responsive input width */
+        max-width: 400px; /* Maximum width for input */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 5px; /* Rounded corners for input */
+        font-size: 1em; /* Font size */
+        transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .registration input:focus,
+    .registration select:focus {
+        border-color: #1e88e5; /* Change border color on focus */
+        outline: none; /* Remove default outline */
+    }
+
+    .registration button {
+        padding: 10px 20px; /* Button padding */
+        background-color: #1e88e5; /* Button color */
+        color: white; /* Button text color */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s; /* Transition for hover effect */
+    }
+
+    .registration button:hover {
+        background-color: #1565c0; /* Darker button color on hover */
+    }
+
+    .registration p {
+        font-size: 1.1em; /* Font size for confirmation message */
+        color: #388e3c; /* Green color for confirmation */
+        margin-top: 20px; /* Margin for spacing */
+    }
+</style>
+
+<script>
+    // JavaScript for handling registration
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        const phoneInput = document.getElementById('phone').value;
+        const nameInput = document.getElementById('name').value;
+        const emailInput = document.getElementById('email').value;
+        const frequencyInput = document.getElementById('alert-frequency').value;
+
+        // Here you can add logic to save the user information to your database or server
+        console.log(`Phone number registered: ${phoneInput}, Name: ${nameInput}, Email: ${emailInput}, Frequency: ${frequencyInput}`); // For testing purposes, log to console
+
+        // Show confirmation message
+        document.getElementById('confirmation-message').style.display = 'block'; 
+        document.getElementById('registration-form').reset(); // Reset form after submission
+    });
+</script>
+
+<!-- Solar Storm Forecast Section -->
+<div class="forecast" id="forecast">
+    <h2>Solar Storm Forecast</h2>
+    <img src="solar-cycle-25-prediction-2023.png" alt="International Sunspot Number and Radio Flux Forecast" class="forecast-image">
+    <h3>Trends from 2020 to 2030</h3>
+    <p>The chart above illustrates the trends in the International Sunspot Number and Radio Flux from 2020 to 2030. Sunspots are indicators of solar activity and can influence geomagnetic storms on Earth. Monitoring these trends helps predict potential solar storms and their effects on our technology and environment.</p>
+    <p>Stay informed about solar activity and its impacts!</p>
+</div>
+
+<style>
+    /* Solar Storm Forecast Styles */
+    .forecast {
+        padding: 40px;
+        background-color:  #fff3e0; /* Light blue background */
+        text-align: center; /* Center align text */
+        margin: 40px auto; /* Center the section */
+        max-width: 900px; /* Maximum width */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    .forecast h2 {
+        font-size: 2.5em; /* Heading size */
+        color: #1e88e5; /* Heading color */
+        margin-bottom: 20px; /* Spacing below heading */
+    }
+
+    .forecast-image {
+        width: 100%; /* Full width of the chart */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for images */
+        margin: 20px 0; /* Margin around the image */
+    }
+
+    .forecast h3 {
+        font-size: 1.8em; /* Heading size for trends */
+        color: #1976d2; /* Darker blue for subheading */
+        margin: 15px 0; /* Spacing below subheading */
+    }
+
+    .forecast p {
+        font-size: 1em; /* Font size for paragraphs */
+        color: #333; /* Darker text for readability */
+        margin: 5px 0; /* Spacing between paragraphs */
+        line-height: 1.5; /* Line height for readability */
+    }
+</style>
+
+<!-- Quiz Game Prototype Section -->
+<div class="quiz-prototype" id="game">
+    <h2>Solar Storm Quiz Game Prototype</h2>
+    
+    <div class="image-gallery">
+        <img src="Screenshot (12).png" alt="Quiz Screen 1" class="quiz-image">
+        <img src="Screenshot (13).png" alt="Quiz Screen 2" class="quiz-image">
+        <img src="Screenshot (14).png" alt="Quiz Screen 3" class="quiz-image">
+        <img src="Screenshot (16).png" alt="Quiz Screen 4" class="quiz-image">
+    </div>
+
+    <h3>Prototype Overview</h3>
+    <p>This is a prototype of our Solar Storm Quiz Game designed to test your knowledge about solar storms, particularly the events of May 2024. The quiz will feature multiple-choice questions, true/false statements, and fun facts about solar activity.</p>
+    <p>Participants will learn about the effects of solar storms on Earth and how to stay informed. The game aims to make learning fun and engaging!</p>
+    
+    <h3>Gameplay Features</h3>
+    <ul>
+        <li>Interactive multiple-choice questions</li>
+        <li>Immediate feedback on answers</li>
+        <li>Educational content for each question</li>
+        <li>Fun and engaging user interface</li>
+    </ul>
+</div>
+
+<style>
+    /* Quiz Game Prototype Styles */
+    .quiz-prototype {
+        padding: 40px;
+        background-color: #fce4ec; /* Light pink background */
+        text-align: center; /* Center align text */
+        margin: 40px auto; /* Center the section */
+        max-width: 900px; /* Maximum width */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    .quiz-prototype h2 {
+        font-size: 2.5em; /* Heading size */
+        color: #d81b60; /* Bright pink for heading */
+        margin-bottom: 20px; /* Spacing below heading */
+    }
+
+    .image-gallery {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center the images */
+        flex-wrap: wrap; /* Allow images to wrap */
+        margin: 20px 0; /* Margin around the gallery */
+    }
+
+    .quiz-image {
+        width: 45%; /* Each image takes up 45% width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for images */
+        margin: 10px; /* Margin around the images */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect on images */
+    }
+
+    .quiz-prototype h3 {
+        font-size: 1.8em; /* Heading size for subheading */
+        color: #c2185b; /* Darker pink for subheading */
+        margin: 15px 0; /* Spacing below subheading */
+    }
+
+    .quiz-prototype p, .quiz-prototype ul {
+        font-size: 1em; /* Font size for paragraphs */
+        color: #333; /* Darker text for readability */
+        margin: 5px 0; /* Spacing between paragraphs */
+        line-height: 1.5; /* Line height for readability */
+    }
+
+    .quiz-prototype ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+    }
+
+    .quiz-prototype li {
+        margin: 10px 0; /* Space between list items */
+    }
+</style>
+
+<!-- Animated Video Section -->
+<div class="animated-video" id="video">
+    <h2>Watch Our Animated Video on Solar Storms</h2>
+    <div class="video-container">
+        <video controls>
+            <source src="vf.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h3>Understanding Solar Storms</h3>
+    <p>Our animated video provides a captivating overview of solar storms and their impacts on Earth. Dive into the science behind solar activity and see how these events can affect our technology and daily lives.</p>
+    <p>Stay informed and prepare for the next solar storm!</p>
+</div>
+
+<style>
+    /* Animated Video Styles */
+    .animated-video {
+        padding: 40px;
+        background-color: #e8f5e9; /* Light green background */
+        text-align: center; /* Center align text */
+        margin: 40px auto; /* Center the section */
+        max-width: 900px; /* Maximum width */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+
+    .animated-video h2 {
+        font-size: 2.5em; /* Heading size */
+        color: #388e3c; /* Bright green for heading */
+        margin-bottom: 20px; /* Spacing below heading */
+    }
+
+    .video-container {
+        position: relative; /* Positioning for responsive video */
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0; /* Hidden height */
+        overflow: hidden; /* Hide overflow */
+        max-width: 100%; /* Full width */
+        border-radius: 10px; /* Rounded corners for video */
+        margin: 20px 0; /* Margin around the video */
+    }
+
+    .video-container video {
+        position: absolute; /* Positioning for video */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .animated-video h3 {
+        font-size: 1.8em; /* Heading size for subheading */
+        color: #2e7d32; /* Darker green for subheading */
+        margin: 15px 0; /* Spacing below subheading */
+    }
+
+    .animated-video p {
+        font-size: 1em; /* Font size for paragraphs */
+        color: #333; /* Darker text for readability */
+        margin: 5px 0; /* Spacing between paragraphs */
+        line-height: 1.5; /* Line height for readability */
+    }
+</style>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<style>
+    /* Back to Top Button Styles */
+    #backToTop {
+        position: fixed; /* Fixed position */
+        bottom: 20px; /* Distance from bottom */
+        right: 30px; /* Distance from right */
+        display: none; /* Hidden by default */
+        background-color: #388e3c; /* Button color */
+        color: white; /* Text color */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px 15px; /* Padding */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        transition: background-color 0.3s; /* Transition effect */
+    }
+
+    #backToTop:hover {
+        background-color: #2e7d32; /* Darker green on hover */
+    }
+</style>
+
+<script>
+// Get the button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show the button when scrolling down
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block"; // Show button
+    } else {
+        backToTopButton.style.display = "none"; // Hide button
+    }
+};
+
+// Scroll to the top when the button is clicked
+backToTopButton.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll to top
+    });
+};
+</script>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Solar Storm Awareness. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+    /* Footer Styles */
+    .footer {
+        background-color: #2c3e50; /* Dark background for the footer */
+        color: white; /* White text for contrast */
+        padding: 20px 0; /* Vertical padding */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-content {
+        max-width: 800px; /* Limit width for content */
+        margin: 0 auto; /* Center align footer content */
+        padding: 0 20px; /* Horizontal padding */
+    }
+
+    .footer h3 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+    .social-icons {
+        margin: 15px 0; /* Margin for spacing */
+    }
+
+    .social-icon {
+        margin: 0 10px; /* Spacing between icons */
+    }
+
+    .social-icon img {
+        width: 40px; /* Size for social media icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+</style>
+
+<style>
+    /* Custom Scrollbar Styles */
+    ::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Track color */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background:#2196F3
+       
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #FF9800; /* Darker orange on hover */
+    }
+
+    /* For Firefox */
+    * {
+        scrollbar-width: thin; /* Width of the scrollbar */
+        scrollbar-color: #2196F3 #f1f1f1; /* Thumb color and track color */
+    }
+
+    /* Scroll to Top Button */
+    .scroll-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #388e3c; /* Green background */
+        color: #fff; /* White text */
+        border: none;
+        border-radius: 50%; /* Circular button */
+        padding: 10px 15px;
+        cursor: pointer;
+        display: none; /* Initially hidden */
+        z-index: 1000; /* Above other elements */
+    }
+</style>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Show the button when scrolling down
+    window.onscroll = function() {
+        const button = document.querySelector('.scroll-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block"; // Show button
+        } else {
+            button.style.display = "none"; // Hide button
+        }
+    };
+
+    // Scroll to the top of the document
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'}); // Smooth scroll to top
+    }
+</script>
+
+
+</body>
+</html>
